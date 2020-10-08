@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:musicPlayerSearch_flutter/Provider/musicProvider.dart';
-import 'package:musicPlayerSearch_flutter/UI/searchScreen.dart';
+import 'package:musicPlayerSearch_flutter/Provider/SongProvider.dart';
+import 'package:musicPlayerSearch_flutter/UI/HomeScreen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -10,8 +10,8 @@ void main() {
 class MusicPlayerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<MusicProvider>(
-      create: (ctx) => MusicProvider(),
+    return ChangeNotifierProvider<SongProvider>(
+      create: (ctx) => SongProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
@@ -19,7 +19,7 @@ class MusicPlayerApp extends StatelessWidget {
             title: Text('YourMusic'),
             backgroundColor: Colors.orangeAccent[100],
           ),
-          body: SearchScreen(),
+          body: HomeScreen(),
         ),
       ),
     );

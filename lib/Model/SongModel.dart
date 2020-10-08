@@ -1,4 +1,4 @@
-class MusicWrapper {
+class SongModel {
   var artworkUrl;
   String artistName;
   String collectionName;
@@ -7,7 +7,7 @@ class MusicWrapper {
   bool isPlaying;
   int trackId;
 
-  MusicWrapper(
+  SongModel(
       {this.artworkUrl,
       this.artistName,
       this.collectionName,
@@ -16,8 +16,8 @@ class MusicWrapper {
       this.trackId,
       this.isPlaying = false});
 
-  factory MusicWrapper.fromJson(Map<String, dynamic> json) {
-    return MusicWrapper(
+  factory SongModel.fromJson(Map<String, dynamic> json) {
+    return SongModel(
         artworkUrl: json['artworkUrl60'],
         artistName: json['artistName'],
         collectionName: json['collectionName'],
